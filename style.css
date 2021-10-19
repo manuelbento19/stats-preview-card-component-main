@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 400;
+}
+html,body,#root{
+    height: 100%;
+}
+body{
+    background-color: hsl(233, 47%, 7%);
+}
+.app{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    max-width: 780px;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    border-radius: 4px;
+}
+.container section{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.container section header{
+    width: 100%;
+    display: flex;
+    color: hsl(0, 0%, 100%);
+}
+.container section header span{
+    text-align: left;
+    font-size: 36px;
+    font-family: Lexend Deca;
+    font-weight:700;
+}
+.container section header #title{
+    width: 100%;
+}
+.container section header #title span{
+    color: hsl(277, 64%, 61%);
+}
+.container section main{
+    margin-top: 20px;
+    width: 100%;
+    padding-right: 68px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.container section main p{
+    width: 100%;
+    text-align: left;
+}
+.container section ul{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 22px;
+    padding-right:68px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+.container section ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+.container section ul li h4{
+    font-weight: bold;
+    font-size: 15px;
+}
+.container section ul li span{
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.container .imagem{
+    width: 700px;
+    position: relative;
+}
+.container .imagem img{
+    width: 100%;
+    height: 100%;
+    border:0;
+    border-radius: 4px;
+}
+.fundo{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    position: absolute;
+    top: 0;
+    opacity: 0.65;
+}
+
+@media(max-width:778px) {
+    .container{
+        flex-direction: column;
+    }
+    .container section{
+        order: 1;
+    }
+    .container .imagem{
+        width: 100%;
+    }
+    .container .imagem img{
+        background-attachment: fixed;
+    }
+    .container section ul{
+        flex-direction: column;
+    }
+    .container section ul li+li{
+        margin-top: 12px;
+    }
+}
